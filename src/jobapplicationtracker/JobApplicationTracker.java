@@ -4,6 +4,11 @@
  */
 package jobapplicationtracker;
 
+import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import jobapplicationtracker.view.LoginFrame;
+
 /**
  *
  * @author Acer Nitro
@@ -14,7 +19,13 @@ public class JobApplicationTracker {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+//        FlatLightLaf.setup();
+        SwingUtilities.invokeLater(() -> {
+            LoginFrame login = new LoginFrame();
+            login.setVisible(true);
+        });
+        
+        
     }
     
 }
