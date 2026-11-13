@@ -4,10 +4,12 @@
  */
 package jobapplicationtracker;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import jobapplicationtracker.view.LoginFrame;
+import jobapplicationtracker.view.Login_frame;
+
 
 /**
  *
@@ -19,11 +21,13 @@ public class JobApplicationTracker {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        FlatLightLaf.setup();
-        SwingUtilities.invokeLater(() -> {
-            LoginFrame login = new LoginFrame();
-            login.setVisible(true);
+        FlatDarkLaf.setup();
+        
+        SwingUtilities.invokeLater(()->{
+            Login_frame frame = new Login_frame();
+            frame.setVisible(true);
         });
+       
         
         
     }
